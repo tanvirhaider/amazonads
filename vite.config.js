@@ -2,6 +2,6 @@
 
 export default {
     // config options
-    "base": "",
+    "base": "",             // this is done to make it work within the scoop assets loading system
     "publicDir": false
 }

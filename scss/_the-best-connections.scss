@@ -1,0 +1,21 @@
+
+
+
+    .the-best-connections {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 150px;
+
+        .box-left {
+            width: 40%;
+            margin-left: 40px;
+            box-sizing: border-box;
+            font-size: 1.4vw;
+            line-height: 1.5;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .consumer-copy {
+            color: var(--pink);
+        }
+    }

@@ -1,0 +1,19 @@
+
+
+.the-initial-idea {
+    display: flex;
+    justify-content: space-between;
+
+    .box-left {
+        
+        margin-left: 40px;
+        width: 40%;
+        font-size: 1.4vw;
+        line-height: 1.5;
+        
+    }
+
+    .consumer-copy {
+        color: var(--red);
+    }
+}

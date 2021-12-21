@@ -1,13 +1,14 @@
 
 
+console.clear();
 
-
-import './scss/style.scss'
+import '../scss/style.scss'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import User,{printName, printAge} from './modules/user.js';
-import Media from './modules/Baymax.amazon.js';
+// import User,{printName, printAge} from './modules/user.js';
+import Media from './Baymax.amazon.js';
+import Observer from './util.observer.js';
 
 /*
 const user = new User('Tanni', 42);
@@ -28,6 +29,10 @@ document.querySelector('#app').innerHTML = `
 
 gsap.fromTo("#app",{alpha:1},{duration:3,alpha:0});
 */
+
+//window.Observer = new Observer(".take-a-stand");
+//window.Observer = new Observer(".the-initial-idea");
+
 
 
 

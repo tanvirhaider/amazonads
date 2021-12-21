@@ -1,0 +1,25 @@
+
+
+    .how-to-share {
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 100px;
+
+
+        .copy-left {
+            font-family:"paralucent";
+            font-size: 3.5vw;
+            // max-width: 500px;
+            width: 30%;
+            margin-left: 40px;
+        }
+
+        .copy-right {
+            font-family: 'Source Sans Pro', sans-serif;
+            width: 40%;
+            font-size: 1.4vw;
+            line-height: 1.5;
+            margin-right: 10%;
+        }
+    }

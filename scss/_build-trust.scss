@@ -1,0 +1,51 @@
+
+
+
+ .build-trust {
+
+    picture {
+        width: 100%;
+        height: auto;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .section-header {
+        font-family:"nazare";
+        font-size: 120px;
+        letter-spacing: -6px;
+        padding-bottom: 50px;
+        margin-left: 40px;
+       
+    }
+    .section-para-1 {
+        padding-top: 20px;
+        font-family:"paralucent";
+        font-size: var(--subheadersize);
+        font-weight: 300;
+        margin-left: 40px;
+        padding-bottom: 50px;
+    }
+
+    .section-para-1::before {
+        content: "‘";
+        position: absolute;
+        left: 25px;
+    }
+
+    .section-para-1::after {
+        content: "’"
+    }
+
+    .section-para-2 {
+        font-family:"paralucent";
+        font-size: 20px;
+        margin-left: 40px;
+        padding-bottom: 100px;
+    }
+}

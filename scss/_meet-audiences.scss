@@ -1,0 +1,59 @@
+
+
+ .meet-audiences {
+
+    // padding-bottom: 50px;
+    padding-top: 100px;
+
+    picture {
+        width: 100%;
+        height: auto;
+        
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .section-header {
+        font-family:"nazare";
+        font-size: 120px;
+        letter-spacing: -6px;
+        margin-left: 40px;
+        padding-bottom: 50px;
+    }
+
+    .section-para {
+        font-family:"paralucent";
+        font-size: var(--subheadersize);
+        font-weight: 300;
+        margin-left: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 80%;
+    }
+
+    .section-para::before {
+        content: "‘";
+        position: absolute;
+        left: 25px;
+    }
+
+    .section-para::after {
+        content: "’"
+    }
+
+    .section-para-2 {
+        margin-left: 40px;
+        padding-bottom: 100px;
+        font-family:"paralucent";
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    
+}

@@ -1,0 +1,24 @@
+
+
+
+  .indeed-and-hillman {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+
+    .box-right {
+        width: 40%;
+        margin-right: 40px;
+        font-size: 1.4vw;
+        line-height: 1.5;
+    }
+
+    .large-percent {
+        position: relative;
+        left: -200px;
+    }
+
+    .consumer-copy {
+        color: var(--blue);
+    }
+}
