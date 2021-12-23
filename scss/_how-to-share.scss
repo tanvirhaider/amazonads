@@ -12,14 +12,55 @@
             font-size: 3.5vw;
             // max-width: 500px;
             width: 30%;
-            margin-left: 40px;
+            margin-left: var(--pad-left);
+
+            @include breakpoint(mobile) {
+                width: calc(100% - 30px);
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 9vw;
+                font-weight: 300;
+                padding-bottom: 50px;
+            }
+
+            @include breakpoint(tablet) {
+                width: 70%;
+                font-size: 7vw;
+                font-weight: 300;
+                padding-bottom: 50px;
+                margin-left: var(--pad-left);
+            }
         }
 
         .copy-right {
             font-family: 'Source Sans Pro', sans-serif;
             width: 40%;
-            font-size: 1.4vw;
+            font-size: var(--h4size);
             line-height: 1.5;
             margin-right: 10%;
+
+            @include breakpoint(mobile) {
+                width: calc(100% - 30px);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include breakpoint(tablet) {
+                width: 70%;
+                margin-left: var(--pad-left);
+            }
+        }
+
+
+        @include breakpoint(mobile) {
+            padding-top: 40px;
+            flex-direction: column;
+            padding-bottom: 40px;
+        }
+
+        @include breakpoint(tablet) {
+            padding-top: 40px;
+            flex-direction: column;
+            padding-bottom: 40px;
         }
     }

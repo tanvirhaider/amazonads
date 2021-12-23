@@ -1,11 +1,6 @@
 
 
-:root {
-    --icon-size: 50px;
-    --icon-pause: 50px;
-    --icon-left: 7%;
-    --icon-right: 7%;
-}
+
 
 
 .video-16x9 video {
@@ -36,8 +31,8 @@
 
 .poster-frame-playBtn {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    // width: 100px;
+    // height: 100px;
     left: 0px;
     right: 0px;
     top: 0px;
@@ -52,12 +47,7 @@
 
 .default-play-buttom, .default-pause-buttom {
     position: absolute;
-    bottom: 10px;
-    left: var(--icon-left);
     z-index: 999;
-
-   
-
 }
 
 .default-play-buttom.show {
@@ -66,7 +56,6 @@
 
 .default-mute-buttom, .default-un-mute-buttom {
     position: absolute;
-    bottom: 10px;
     right: var(--icon-right);
     z-index: 999;
 }
@@ -77,8 +66,8 @@
 }
 
 .default-pause-buttom {
-    width: var(--icon-pause);
-    height: var(--icon-pause);
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
 .default-mute-buttom {
@@ -98,15 +87,6 @@
 .hide {
     display: none;
 }
-
-/*
-.pause-state .default-play-buttom, 
-.pause-state .default-pause-buttom,
-.pause-state .default-mute-buttom,
-.pause-state .default-un-mute-buttom {
-    display: none;
-}
-*/
 
 
 .progress-bar {
@@ -141,19 +121,13 @@
 
 
 .video-9x16 { position: relative; }
-// .video-9x16:before {
-//     display: block;
-//     content: " ";
-//     width: 100%;
-//     padding-top: 177.7777777778%;
-// }
+
 .video-9x16 video {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    /* background-color: pink; */
 }
 
 .tiktok {

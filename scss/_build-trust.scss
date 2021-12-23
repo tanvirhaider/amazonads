@@ -14,13 +14,13 @@
         }
     }
 
-
     .section-header {
         font-family:"nazare";
-        font-size: 120px;
+        font-size: var(--sectionHFsize);
         letter-spacing: -6px;
         padding-bottom: 50px;
-        margin-left: 40px;
+        margin-left: var(--pad-left);
+        line-height: .9;
        
     }
     .section-para-1 {
@@ -28,14 +28,14 @@
         font-family:"paralucent";
         font-size: var(--subheadersize);
         font-weight: 300;
-        margin-left: 40px;
+        margin-left: var(--pad-left);
         padding-bottom: 50px;
     }
 
     .section-para-1::before {
         content: "‘";
         position: absolute;
-        left: 25px;
+        left: calc(var(--pad-left) - 1vw);
     }
 
     .section-para-1::after {
@@ -44,8 +44,14 @@
 
     .section-para-2 {
         font-family:"paralucent";
-        font-size: 20px;
-        margin-left: 40px;
+        font-size: var(--h3size);
+        margin-left: var(--pad-left);
         padding-bottom: 100px;
     }
+
+    
+
+
+
+
 }

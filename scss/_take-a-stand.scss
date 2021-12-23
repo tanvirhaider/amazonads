@@ -19,9 +19,9 @@
         .credit {
             font-family:"paralucent";
             letter-spacing: 1px;
-            font-size: 20px;
+            font-size: var(--h3size);
             font-weight: 300;
-            margin-left: 40px;
+            margin-left: var(--pad-left);
             padding-bottom: 50px;
 
             .name {
@@ -33,9 +33,9 @@
       
         .section-header {
             font-family:"nazare";
-            font-size: 120px;
+            font-size: var(--sectionHFsize);
             letter-spacing: -6px;
-            margin-left: 40px;
+            margin-left: var(--pad-left);
             padding-bottom: 30px;
             
         }
@@ -43,20 +43,32 @@
         .section-para {
             font-family:"paralucent";
             font-size: var(--subheadersize);
-            margin-left: 40px;
+            margin-left: var(--pad-left);
             padding-bottom: 50px;
             font-weight: 300;
             padding-top: 50px;
             width: 70%;
+
+            @include breakpoint(mobile) {
+                width: calc(100% - 30px);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include breakpoint(tablet) {
+                width: 80%;
+            }
         }
 
         .section-para::before {
             content: "‘";
             position: absolute;
-            left: 25px;
+            left: calc(var(--pad-left) - 1vw);
         }
 
         .section-para::after {
             content: "’"
         }
+
+        
     }

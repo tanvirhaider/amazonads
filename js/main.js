@@ -5,33 +5,116 @@ console.clear();
 import '../scss/style.scss'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-// import User,{printName, printAge} from './modules/user.js';
 import Media from './Baymax.amazon.js';
 import Observer from './util.observer.js';
 
-/*
-const user = new User('Tanni', 42);
-console.log(user);
-printName(user);
-printAge(user);
-*/
 
 gsap.registerPlugin(ScrollTrigger);
 
-/*
-document.querySelector('#app').innerHTML = `
-  <h1>yo MTV!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+
+function numberUpdater (triggerele, targetele, startnum, endnum) {
+
+	var startCount = startnum;
+	var num = {var:startCount};
+	var val1 = document.querySelector(targetele);
+
+	var numberUpdate1 = gsap.timeline({
+	scrollTrigger: {
+		trigger: triggerele,
+		start: "top bottom-=20%",
+		end: '+=50%',
+		scrub: 0.5, 
+		}
+	})
+
+	numberUpdate1.to(num, {var: endnum, duration: 1, ease:"none", onUpdate:changeNumber});
+	function changeNumber() { val1.innerHTML = (num.var).toFixed(); }
+
+}
+
+numberUpdater (".the-initial-idea .value",".the-initial-idea .value",0,72);
+numberUpdater (".indeed-and-hillman .value",".indeed-and-hillman .value",0,60);
+numberUpdater (".the-best-connections .value",".the-best-connections .value",0,75);
 
 
 
-gsap.fromTo("#app",{alpha:1},{duration:3,alpha:0});
-*/
+var largeImgSlide1 = gsap.timeline({
+  scrollTrigger: {
+     trigger: ".take-a-stand",
+     pinSpacing: false,
+   scrub:.5,
+    start: "top bottom+=10%",
+    end: '+=100%',
+  },
+})
 
-//window.Observer = new Observer(".take-a-stand");
-//window.Observer = new Observer(".the-initial-idea");
+largeImgSlide1.fromTo(".take-a-stand img", {x:500,scale:0.5,alpha:0,rotation:30,y:100},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
+
+
+var largeImgSlide2 = gsap.timeline({
+  scrollTrigger: {
+     trigger: ".meet-audiences",
+     pinSpacing: false,
+   scrub:.5,
+    start: "top bottom+=10%",
+    end: '+=100%',
+  },
+})
+
+largeImgSlide2.fromTo(".meet-audiences img", {x:-500,scale:0.5,alpha:0,rotation:-30,y:100},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
+
+
+var largeImgSlide3 = gsap.timeline({
+  scrollTrigger: {
+     trigger: ".build-trust",
+     pinSpacing: false,
+   scrub:.5,
+    start: "top bottom+=10%",
+    end: '+=100%',
+  },
+})
+
+largeImgSlide3.fromTo(".build-trust img", {x:500,scale:0.5,alpha:0,rotation:30,y:100},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
+
+
+
+var talentImgSlide1 = gsap.timeline({
+  scrollTrigger: {
+     trigger: ".the-initial-idea .talent-pic",
+     pinSpacing: false,
+   scrub:1,
+    start: "top bottom+=20%",
+    end: '+=50%',
+  },
+})
+
+talentImgSlide1.fromTo(".the-initial-idea .talent-pic img", {x:100,alpha:0,rotation:-3},{x:0,alpha:1,duration:1,rotation:3});
+
+
+var talentImgSlide2 = gsap.timeline({
+  scrollTrigger: {
+     trigger: ".indeed-and-hillman .talent-pic",
+     pinSpacing: false,
+   scrub:1,
+   start: "top bottom+=20%",
+   end: '+=50%',
+  },
+})
+
+talentImgSlide2.fromTo(".indeed-and-hillman .talent-pic img", {x:-100,alpha:0,rotation:3},{x:0,alpha:1,duration:1,rotation:-3});
+
+
+var talentImgSlide3 = gsap.timeline({
+  scrollTrigger: {
+     trigger: ".the-best-connections .talent-pic",
+     pinSpacing: false,
+   scrub:1,
+   start: "top bottom+=20%",
+    end: '+=50%',
+  },
+})
+
+talentImgSlide3.fromTo(".the-best-connections .talent-pic img", {x:100,alpha:0,rotation:-3},{x:0,alpha:1,duration:1,rotation:3});
 
 
 

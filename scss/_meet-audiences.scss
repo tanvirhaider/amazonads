@@ -20,26 +20,33 @@
 
     .section-header {
         font-family:"nazare";
-        font-size: 120px;
+        font-size: var(--sectionHFsize);
         letter-spacing: -6px;
-        margin-left: 40px;
+        margin-left: var(--pad-left);
         padding-bottom: 50px;
+        line-height: .9;
     }
 
     .section-para {
         font-family:"paralucent";
         font-size: var(--subheadersize);
         font-weight: 300;
-        margin-left: 40px;
+        margin-left: var(--pad-left);
         padding-top: 50px;
         padding-bottom: 50px;
         width: 80%;
+
+        @include breakpoint(mobile) {
+            width: calc(100% - 30px);
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .section-para::before {
         content: "‘";
         position: absolute;
-        left: 25px;
+        left: calc(var(--pad-left) - 1vw);
     }
 
     .section-para::after {
@@ -47,12 +54,17 @@
     }
 
     .section-para-2 {
-        margin-left: 40px;
+        margin-left: var(--pad-left);
         padding-bottom: 100px;
         font-family:"paralucent";
-        font-size: 20px;
+        font-size: var(--h3size);
         font-weight: 300;
         letter-spacing: 1px;
+
+        @include breakpoint(tablet) {
+            width: 45%;
+            padding-bottom: 50px;
+        }
     }
 
     
