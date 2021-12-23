@@ -10,11 +10,7 @@
         font-size: var(--h4size);
         line-height: 1.5;
 
-        @include breakpoint(mobile) {
-            width: calc(100% - 30px);
-            margin-left: auto;
-            margin-right: auto;
-        }
+        @include breakpoint(mobile) { @include mobileparagraph (); }
 
         @include breakpoint(tablet) {
             width: 70%;
@@ -30,6 +26,7 @@
 
         position: relative;
         left: -40px;
+        padding-bottom: var(--section-padding);
 
         .audio-talent {
             color: var(--red);

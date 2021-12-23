@@ -18,7 +18,7 @@
         font-family:"nazare";
         font-size: var(--sectionHFsize);
         letter-spacing: -6px;
-        padding-bottom: 50px;
+        padding-bottom: var(--section-padding);
         margin-left: var(--pad-left);
         line-height: .9;
        
@@ -29,7 +29,7 @@
         font-size: var(--subheadersize);
         font-weight: 300;
         margin-left: var(--pad-left);
-        padding-bottom: 50px;
+        padding-bottom: var(--section-padding);
     }
 
     .section-para-1::before {
@@ -46,7 +46,8 @@
         font-family:"paralucent";
         font-size: var(--h3size);
         margin-left: var(--pad-left);
-        padding-bottom: 100px;
+        // padding-bottom: var(--section-gaps);
+        padding-bottom: var(--section-padding);
     }
 
     

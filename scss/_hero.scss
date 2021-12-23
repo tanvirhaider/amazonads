@@ -32,10 +32,6 @@
             margin-left: auto;
             margin-right: auto;
 
-            @include breakpoint(mobile) {
-                width: calc(100% - 30px);
-                margin-left: auto;
-                margin-right: auto;
-            }
+            @include breakpoint(mobile) { @include mobileparagraph (); }
         }
     }

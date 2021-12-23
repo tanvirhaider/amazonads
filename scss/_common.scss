@@ -27,6 +27,7 @@ p {
         top: 35%;
         padding-left: 1vw;
         font-weight: 300;
+        right: -20%;
 
 
         @include breakpoint(mobile) {
@@ -72,7 +73,7 @@ p {
     font-family:"paralucent";
     font-size: 3vw;
     font-weight: 300;
-    padding-bottom: 75px;
+    padding-bottom: var(--section-padding);
     line-height: 3vw;
 
     @include breakpoint(mobile) {

@@ -4,7 +4,7 @@
   .indeed-and-hillman {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 150px;
+    padding-bottom: var(--section-gaps);
 
     .box-right {
         width: 40%;
@@ -12,11 +12,7 @@
         font-size: var(--h4size);
         line-height: 1.5;
 
-        @include breakpoint(mobile) {
-            width: calc(100% - 30px);
-            margin-left: auto;
-            margin-right: auto;
-        }
+        @include breakpoint(mobile) { @include mobileparagraph (); }
 
         @include breakpoint(tablet) {
             width: 70%;

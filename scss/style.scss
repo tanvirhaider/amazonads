@@ -3,7 +3,7 @@
 @import 'reset';
 @import 'fonts';
 @import 'mixin';
-@import 'utils';
+
 
 body {
     background-color: #FFFEF9;
@@ -28,6 +28,8 @@ body {
     --icon-right: 0px;
     --pad-left: 40px;
     --border-width: 15px;
+    --section-gaps: 100px;
+    --section-padding: 50px;
 
     @include breakpoint(mobile) {
         --sectionHFsize: 16vw;
@@ -62,7 +64,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+   
 
+
+    @import 'utils';
     @import 'common';
     @import 'Baymax.amazon';
     @import 'hero';

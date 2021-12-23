@@ -13,7 +13,7 @@
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: var(--section-padding);
         text-align: center;
 
         @include breakpoint(mobile) {
@@ -66,7 +66,7 @@
     }
 
     .logo {
-        margin-top: 60px;
+        margin-top: var(--section-padding);
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -87,5 +87,5 @@
         }
     }
 
-    padding-bottom: 200px;
+    padding-bottom: var(--section-gaps);
 }
