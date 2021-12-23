@@ -37,84 +37,64 @@ numberUpdater (".indeed-and-hillman .value",".indeed-and-hillman .value",0,60);
 numberUpdater (".the-best-connections .value",".the-best-connections .value",0,75);
 
 
+function largeImgSlide (data) {
 
-var largeImgSlide1 = gsap.timeline({
-  scrollTrigger: {
-     trigger: ".take-a-stand",
-     pinSpacing: false,
-   scrub:.5,
-    start: "top bottom+=10%",
-    end: '+=100%',
-  },
-})
+	var largeImgSlide1 = gsap.timeline({
+		scrollTrigger: {
+		   trigger: data.trigger,
+		   pinSpacing: false,
+		 scrub:.5,
+		  start: "top bottom+=10%",
+		  end: '+=100%',
+		},
+	  })
+	  
+	largeImgSlide1.fromTo(data.target, {x:data.xpos,scale:0.5,alpha:0,rotation:data.rotation,y:data.ypos},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
+}
 
-largeImgSlide1.fromTo(".take-a-stand img", {x:500,scale:0.5,alpha:0,rotation:30,y:100},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
-
-
-var largeImgSlide2 = gsap.timeline({
-  scrollTrigger: {
-     trigger: ".meet-audiences",
-     pinSpacing: false,
-   scrub:.5,
-    start: "top bottom+=10%",
-    end: '+=100%',
-  },
-})
-
-largeImgSlide2.fromTo(".meet-audiences img", {x:-500,scale:0.5,alpha:0,rotation:-30,y:100},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
+largeImgSlide ({ trigger: ".take-a-stand", target: ".take-a-stand img", xpos: 500, ypos: 100, rotation: 30});
+largeImgSlide ({ trigger: ".meet-audiences", target: ".meet-audiences img", xpos: -500, ypos: 100, rotation: -30});
+largeImgSlide ({ trigger: ".build-trust", target: ".build-trust img", xpos: 500, ypos: 100, rotation: 30});
 
 
-var largeImgSlide3 = gsap.timeline({
-  scrollTrigger: {
-     trigger: ".build-trust",
-     pinSpacing: false,
-   scrub:.5,
-    start: "top bottom+=10%",
-    end: '+=100%',
-  },
-})
+function talentImgSlide (data) {
 
-largeImgSlide3.fromTo(".build-trust img", {x:500,scale:0.5,alpha:0,rotation:30,y:100},{x:0,scale:1,alpha:1,duration:1,rotation:0,y:0});
+	var talentImgSlide1 = gsap.timeline({
+		scrollTrigger: {
+		   trigger: data.trigger,
+		   pinSpacing: false,
+		 scrub:1,
+		  start: "top bottom+=20%",
+		  end: '+=50%',
+		},
+	  })
+	  
+	  talentImgSlide1.fromTo(data.target, {x:data.xpos,alpha:0,rotation:data.rotationstart},{x:0,alpha:1,duration:1,rotation:data.rotationend});
+}
 
+talentImgSlide ({
+	trigger: ".the-initial-idea .talent-pic",
+	target: ".the-initial-idea .talent-pic img",
+	xpos: 100,
+	rotationstart: -3,
+	rotationend: 3
+});
 
+talentImgSlide ({
+	trigger: ".indeed-and-hillman .talent-pic",
+	target: ".indeed-and-hillman .talent-pic img",
+	xpos: -100,
+	rotationstart: 3,
+	rotationend: -3
+});
 
-var talentImgSlide1 = gsap.timeline({
-  scrollTrigger: {
-     trigger: ".the-initial-idea .talent-pic",
-     pinSpacing: false,
-   scrub:1,
-    start: "top bottom+=20%",
-    end: '+=50%',
-  },
-})
-
-talentImgSlide1.fromTo(".the-initial-idea .talent-pic img", {x:100,alpha:0,rotation:-3},{x:0,alpha:1,duration:1,rotation:3});
-
-
-var talentImgSlide2 = gsap.timeline({
-  scrollTrigger: {
-     trigger: ".indeed-and-hillman .talent-pic",
-     pinSpacing: false,
-   scrub:1,
-   start: "top bottom+=20%",
-   end: '+=50%',
-  },
-})
-
-talentImgSlide2.fromTo(".indeed-and-hillman .talent-pic img", {x:-100,alpha:0,rotation:3},{x:0,alpha:1,duration:1,rotation:-3});
-
-
-var talentImgSlide3 = gsap.timeline({
-  scrollTrigger: {
-     trigger: ".the-best-connections .talent-pic",
-     pinSpacing: false,
-   scrub:1,
-   start: "top bottom+=20%",
-    end: '+=50%',
-  },
-})
-
-talentImgSlide3.fromTo(".the-best-connections .talent-pic img", {x:100,alpha:0,rotation:-3},{x:0,alpha:1,duration:1,rotation:3});
+talentImgSlide ({
+	trigger: ".the-best-connections .talent-pic",
+	target: ".the-best-connections .talent-pic img",
+	xpos: 100,
+	rotationstart: -3,
+	rotationend: 3
+});
 
 
 
