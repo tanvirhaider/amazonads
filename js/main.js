@@ -2,12 +2,11 @@
 
 console.clear();
 
-import $ from "cash-dom";
-import '../scss/style.scss'
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Media from './Baymax.amazon.js';
-import Observer from './util.observer.js';
+import $ from "cash-dom";									// loading a small lib to get some of the oldschool jquery shortcuts
+import '../scss/style.scss'									// loading in the style
+import { gsap } from "gsap";								// loading in the green sock library
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";	// loading in the green sock scroll trigger
+import Media from './Baymax.amazon.js';						// loading in the baymax audio player
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +17,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function init () {
+
+	/* :::: Code to run the initial animation on load  ::::::::::: */
+	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 	function initialAnimation () {
 		var initAnimation = gsap.timeline();
@@ -125,8 +127,6 @@ function init () {
 	});
 	
 	
-	
-	
 	/* ::::::::: Code to set up Audio Players  ::::::::::::::::::: */
 	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 	
@@ -160,8 +160,6 @@ function init () {
 	});
 
 }
-
-
 
 
 $(function() {init ();});  // init will run after DOM elements are loaded 
