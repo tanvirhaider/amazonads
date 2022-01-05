@@ -48,6 +48,7 @@
 .default-play-buttom, .default-pause-buttom {
     position: absolute;
     z-index: 999;
+    cursor: pointer;
 }
 
 .default-play-buttom.show {

@@ -39,6 +39,7 @@
         color: white;
         text-align: center;
         background-color: black;
+        border: 2px solid white;
         padding: 15px 35px;
         position: relative;
         width: fit-content;
@@ -51,6 +52,7 @@
         text-transform: uppercase;
         cursor: pointer;
         user-select: none;
+        transition: all 0.3s;
 
         @include breakpoint(mobile) {
             width: 50%;
@@ -63,6 +65,14 @@
             font-size: 3vw;
             padding: 20px 35px;
         }
+
+        &:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            box-sizing: border-box;
+          
+        }
     }
 
     .logo {
@@ -71,6 +81,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 20%;
+        cursor: pointer;
 
         img {
             object-fit: contain;

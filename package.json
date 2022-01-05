@@ -1,6 +1,6 @@
 {
   "name": "amazonpaidpost",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,16 +8,11 @@
     "postbuild": "cd dist && zip -r ../dist.zip  . && cd .."
   },
   "devDependencies": {
-    "vite": "^2.7.0"
+    "vite": "^2.7.10"
   },
   "dependencies": {
-    "animate.css": "^4.1.1",
     "cash-dom": "^8.1.0",
     "gsap": "^3.8.0",
-    "js-yaml": "^4.1.0",
-    "lengthy-svg": "^0.7.0",
-    "lottie-web": "^5.8.1",
-    "sass": "^1.44.0",
-    "vanilla-lazyload": "^17.5.0"
+    "sass": "^1.44.0"
   }
 }
