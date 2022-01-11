@@ -681,7 +681,7 @@
             
             AssignBackgroundImage (object, imgLoc) {
                 object.style.backgroundImage = 'url(' + imgLoc + ')';
-                object.style.backgroundSize = "contain";
+                //object.style.backgroundSize = "contain";
                 object.style.backgroundPosition = "center";
                 object.style.backgroundRepeat = "no-repeat";
             }

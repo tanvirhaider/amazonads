@@ -70,8 +70,14 @@
 
     @include breakpoint(mobile) {
         display: none;
-     }
+    }
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
 }
+
+
 
 
 .mobile {
@@ -79,5 +85,9 @@
 
     @include breakpoint(mobile) {
         display: block;
-     }
+    }
+
+    @include breakpoint(tablet) {
+        display: block;
+    }
 }

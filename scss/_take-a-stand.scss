@@ -1,6 +1,8 @@
 .take-a-stand {
   position: relative;
   width: 100%;
+  background-color: var(--bg-color);
+  top: -3.5vw;
 
   picture {
     width: 100%;
@@ -19,7 +21,7 @@
     overflow: hidden;
     // min-width: 100vw;
     min-height: 51vw;
-    background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/large-2.jpg);
+    background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/Illustration_1.jpg);
     background-size: contain;
     border-radius: 1.5vw;
 }
@@ -44,10 +46,11 @@
     letter-spacing: -6px;
     margin-left: var(--pad-left);
     padding-bottom: 30px;
+    color: black;
 
-    @include breakpoint(tablet) {
-      padding-bottom: 17px;
-    }
+    @include breakpoint(tablet) {padding-bottom: 17px;}
+    @include breakpoint(mobile) {letter-spacing: -4px; }
+
   }
 
   .section-para {
@@ -58,6 +61,7 @@
     font-weight: 300;
     padding-top: var(--section-padding);
     width: 70%;
+    color: black;
 
     @include breakpoint(mobile) {
       @include mobileparagraph();
@@ -73,9 +77,12 @@
     content: "‘";
     position: absolute;
     left: calc(var(--pad-left) - 1vw);
+    color: black;
   }
 
   .section-para::after {
     content: "’";
+    position: relative;
+    left: -0.75vw;
   }
 }

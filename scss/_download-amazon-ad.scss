@@ -15,6 +15,7 @@
         position: relative;
         padding-bottom: var(--section-padding);
         text-align: center;
+        color: black;
 
         @include breakpoint(mobile) {
            font-size: 6vw;
@@ -36,13 +37,14 @@
     
     .cta {
         font-family:"paralucent";
-        color: white;
+        color: var(--bg-color);
         text-align: center;
         background-color: black;
-        border: 2px solid white;
+        border: 2px solid var(--bg-color);
         padding: 15px 35px;
         position: relative;
         width: fit-content;
+        max-width: 22%;
         border-radius: 15px;
         margin-left: auto;
         margin-right: auto;
@@ -67,7 +69,7 @@
         }
 
         &:hover {
-            background-color: white;
+            background-color: var(--bg-color);
             color: black;
             border: 2px solid black;
             box-sizing: border-box;

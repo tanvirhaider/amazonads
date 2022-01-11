@@ -3,13 +3,13 @@
 @import "mixin";
 
 body {
-  background-color: #fffef9;
+  background-color: #F0F0EC;  
   padding: 0px;
   margin: 0px;
 }
 
 .wrapper {
-  --pink: #ff7aba;
+  --pink: #3F21BD;
   --blue: #009ce6;
   --red: #ff415f;
   --sectionHFsize: 8vw;
@@ -19,15 +19,18 @@ body {
   --percentVal: 28vw;
   --percentSymbol: 8vw;
   --max-width: 100vw;
-  --icon-size: 3vw;
+  --icon-size: 4vw;
   --icon-left: 0px;
   --icon-right: 0px;
-  --pad-left: 40px;
+  --pad-left: 90px;
   --border-width: 15px;
   --section-gaps: 100px;
   --section-padding: 50px;
   --audio-talent-fsize: 1.1vw;
-  --player-control-fsize: 1.3vw;
+  --player-control-fsize: 1.1vw;
+  --body-copy-color: hsl(0, 0%, 20%);
+  --bg-color: #F0F0EC;
+  --border-color: #000;
 
   @include breakpoint(mobile) {
     --sectionHFsize: 16vw;
@@ -57,11 +60,14 @@ body {
   width: 100%;
   border-left: var(--border-width) solid black;
   border-right: var(--border-width) solid black;
+  border-top: var(--border-width) solid black;
+  border-bottom: var(--border-width) solid black;
   position: relative;
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  // overflow-x: hidden;
+  // overflow: hidden;
 
   @import "utils";
   @import "common";
@@ -75,4 +81,5 @@ body {
   @import "build-trust";
   @import "the-best-connections";
   @import "download-amazon-ad";
+
 }

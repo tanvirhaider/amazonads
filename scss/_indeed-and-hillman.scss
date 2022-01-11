@@ -1,81 +1,70 @@
 .indeed-and-hillman {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: var(--section-gaps);
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: var(--section-gaps);
 
-  .box-right {
-    width: 40%;
-    margin-right: var(--pad-left);
-    font-size: var(--h4size);
-    line-height: 1.5;
+	.box-right {
+		width: 40%;
+		margin-right: var(--pad-left);
+		font-size: var(--h4size);
+		line-height: 1.5;
 
-    @include breakpoint(mobile) {
-      @include mobileparagraph();
-    }
+		@include breakpoint(mobile) { @include mobileparagraph(); }
 
-    @include breakpoint(tablet) {
-      width: 70%;
-      margin-left: var(--pad-left);
-    }
-  }
+		@include breakpoint(tablet) {
+			width: 70%;
+			margin-left: var(--pad-left);
+		}
 
-  .large-percent {
-    position: relative;
-    left: -6vw;
 
-    @include breakpoint(mobile) {
-      left: -20px;
-    }
-  }
+		.per-sec {
+			@include breakpoint(tablet) {
+				position: relative;
+				top: -15px;
+			}
+		}
+	}
 
-  .consumer-copy {
-    color: var(--blue);
-    @include breakpoint(tablet) {
-      width: 80%;
-      padding-bottom: 80px;
-    }
-  }
+	.large-percent {
+		position: relative;
+		left: -6vw;
 
-  .audio-box {
-    margin-left: var(--pad-left);
-    .audio-talent {
-      color: var(--blue);
-      padding-top: 24px;
-    }
+		@include breakpoint(mobile) { left: -20px;}
+	}
 
-    .player-control {
-      color: var(--blue);
-    }
+	.consumer-copy {
+		color: var(--blue);
+		@include breakpoint(tablet) {
+			width: 80%;
+			padding-bottom: 80px;
+		}
+	}
 
-    .talent-pic img {
-      transform: rotate(-3deg);
-    }
+	.audio-box {
+		padding-left:var(--pad-left);
+		overflow: visible;
+		@include breakpoint(tablet) {padding-left: unset;}
 
-    @include breakpoint(mobile) {
-      left: unset;
-      padding-bottom: 50px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+		.talent-pic { 
+			transform: rotate(5deg);
+			@include breakpoint(mobile) { transform: rotate(2deg);}
+		}
 
-    @include breakpoint(tablet) {
-      padding-bottom: 50px;
-    }
-  }
+	}
+	.audio-box .player .audio-talent {color: #009CE6}
+	.audio-box .player .ct {color: #009CE6}
 
-  .default-play-buttom,
-  .default-pause-buttom {
-    // filter: hue-rotate(65deg);
-  }
 
-  @include breakpoint(mobile) {
-    flex-direction: column;
-    padding-bottom: 50px;
-  }
 
-  @include breakpoint(tablet) {
-    padding-top: 40px;
-    flex-direction: column;
-    padding-bottom: 100px;
-  }
+	@include breakpoint(mobile) {
+		flex-direction: column;
+		padding-bottom: 50px;
+		// justify-content: flex-end;
+	}
+
+	@include breakpoint(tablet) {
+		padding-top: 40px;
+		flex-direction: column;
+		padding-bottom: 100px;
+	}
 }

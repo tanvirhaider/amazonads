@@ -29,37 +29,39 @@ function init() {
 	// );
 
 
-	initAnimation.fromTo(
-		".hero .hero-img",
-		{ x: 0, scale: 1, alpha: 0, rotation: 0, y: 0, backgroundPosition: "50% 2000%"},
-		{ delay: .5, x: 0, scale: 1, alpha: 1, duration: 2, rotation: 0, y: 0 , backgroundPosition: "50% 50%", ease: "power3.inOut"}
-	);
+	// initAnimation.fromTo(
+	// 	".hero .hero-img",
+	// 	{ x: 0, scale: 1, alpha: 0, rotation: 0, y: 0, backgroundPosition: "50% -2000%"},
+	// 	{ delay: .5, x: 0, scale: 1, alpha: 1, duration: 2, rotation: 0, y: 0 , backgroundPosition: "50% 50%", ease: "power3.inOut"}
+	// );
 
 
-	initAnimation.fromTo(
-		".hero .section-header",
-		{ alpha: 0, y: 150 },
-		{ alpha: 1, duration: 1, y: 0 },
-		"-=0.15"
-	);
-	initAnimation.fromTo(
-		".hero .devider-line",
-		{ alpha: 0, y: 0, width: "0%" },
-		{ alpha: 1, duration: 1, y: 0 , delay: 0.2, width: "calc(100% - 80px)"},
-		"-=0.75"
-	);
-	initAnimation.fromTo(
-		".how-to-share .copy-left",
-		{ alpha: 0, x: -500 },
-		{ alpha: 1, duration: 1, x: 0 },
-		"-=0.75"
-	);
-	initAnimation.fromTo(
-		".how-to-share .copy-right",
-		{ alpha: 0, x: 500 },
-		{ alpha: 1, duration: 1, x: 0 },
-		"-=1"
-	);
+	// initAnimation.fromTo(
+	// 	".hero .other-than-hero",
+	// 	{ alpha:0 },
+	// 	{ duration: 1, alpha:1 },	"-=0.75"
+	// );
+
+	// initAnimation.fromTo(
+	// 	".hero .devider-line",
+	// 	{ alpha: 0, y: 0, width: "0%" },
+	// 	{ alpha: 1, duration: 1, y: 0 , delay: 0.2, width: "calc(100% - 80px)"},
+	// 	"-=0.75"
+	// );
+	// initAnimation.fromTo(
+	// 	".how-to-share .copy-left",
+	// 	{ alpha: 0, x: -500 },
+	// 	{ alpha: 1, duration: 1, x: 0 },
+	// 	"-=0.75"
+	// );
+	// initAnimation.fromTo(
+	// 	".how-to-share .copy-right",
+	// 	{ alpha: 0, x: 500 },
+	// 	{ alpha: 1, duration: 1, x: 0 },
+	// 	"-=1"
+	// );
+
+
 	}
 
 	initialAnimation();
@@ -80,7 +82,7 @@ function init() {
 
 	numberUpdate1.to(num, {
 		var: endnum,
-		duration: 1,
+		duration: 0.5,
 		ease: "none",
 		onUpdate: changeNumber,
 	});
@@ -162,7 +164,7 @@ function init() {
 	scrollTrigger: {
 		trigger: ".take-a-stand",
 		pinSpacing: false,
-		scrub: 0.5,
+		scrub: 1,
 		start: "top bottom+=10%",
 		end: "+=150%",
 	},
@@ -171,7 +173,7 @@ function init() {
 
 	largeImgSlide1.fromTo(
 	".take-a-stand .hero-img",
-	{ x: 0, alpha: 0, rotation: 0, y: 0, backgroundPosition: "50% 1000%"},
+	{ x: 0, alpha: 1, rotation: 0, y: 0, backgroundPosition: "50% 200%"},
 	{ delay: 0, x: 0, alpha: 1, duration: 2, rotation: 0, y: 0 , backgroundPosition: "50% 50%", ease: "power3.inOut"}
 	);
 
@@ -180,7 +182,7 @@ function init() {
 	scrollTrigger: {
 		trigger: ".meet-audiences",
 		pinSpacing: false,
-		scrub: 0.5,
+		scrub: 1,
 		start: "top bottom+=10%",
 		end: "+=150%",
 	},
@@ -189,7 +191,7 @@ function init() {
 
 	largeImgSlide2.fromTo(
 	".meet-audiences .hero-img",
-	{ x: 0, alpha: 0, rotation: 0, y: 0, backgroundPosition: "50% 1000%"},
+	{ x: 0, alpha: 1, rotation: 0, y: 0, backgroundPosition: "50% 200%"},
 	{ delay: 0, x: 0, alpha: 1, duration: 2, rotation: 0, y: 0 , backgroundPosition: "50% 50%", ease: "power3.inOut"}
 	);
 
@@ -197,7 +199,7 @@ function init() {
 	scrollTrigger: {
 		trigger: ".build-trust",
 		pinSpacing: false,
-		scrub: 0.5,
+		scrub: 1,
 		start: "top bottom+=10%",
 		end: "+=150%",
 	},
@@ -206,7 +208,7 @@ function init() {
 
 	largeImgSlide3.fromTo(
 	".build-trust .hero-img",
-	{ x: 0, alpha: 0, rotation: 0, y: 0, backgroundPosition: "50% 1000%"},
+	{ x: 0, alpha: 1, rotation: 0, y: 0, backgroundPosition: "50% 200%"},
 	{ delay: 0, x: 0, alpha: 1, duration: 2, rotation: 0, y: 0 , backgroundPosition: "50% 50%", ease: "power3.inOut"}
 	);
 
@@ -224,41 +226,44 @@ function init() {
 		trigger: data.trigger,
 		pinSpacing: false,
 		scrub: 1,
-		start: "top bottom+=20%",
-		end: "+=100%",
+		start: "top bottom+=30%",
+		end: "+=50%",
 		},
 	});
 
 	talentImgSlide1.fromTo(
 		data.target,
-		{ x: data.xpos, alpha: 0, rotation: data.rotationstart },
-		{ x: 0, alpha: 1, duration: 1, rotation: data.rotationend }
+		{ x: data.xpos, alpha: 0, rotation: data.rotationstart,scale:0.5 },
+		{ x: 0, alpha: 1, duration: 1, rotation: data.rotationend,scale:0.9 }
 	);
 	}
 
+	/*
 	talentImgSlide({
-	trigger: ".the-initial-idea .talent-pic",
-	target: ".the-initial-idea .talent-pic img",
+	trigger: ".the-initial-idea .desktop .talent-pic",
+	target: ".the-initial-idea .desktop .talent-pic img",
 	xpos: 100,
 	rotationstart: -3,
 	rotationend: 3,
 	});
+	
 
 	talentImgSlide({
-	trigger: ".indeed-and-hillman .talent-pic",
-	target: ".indeed-and-hillman .talent-pic img",
+	trigger: ".indeed-and-hillman .desktop .talent-pic",
+	target: ".indeed-and-hillman .desktop .talent-pic img",
 	xpos: -100,
 	rotationstart: 3,
 	rotationend: -3,
 	});
 
 	talentImgSlide({
-	trigger: ".the-best-connections .talent-pic",
-	target: ".the-best-connections .talent-pic img",
+	trigger: ".the-best-connections .desktop .talent-pic",
+	target: ".the-best-connections .desktop .talent-pic img",
 	xpos: 100,
 	rotationstart: -3,
 	rotationend: 3,
 	});
+	*/
 
 	/* ::::::::: Code to set up Audio Players  ::::::::::::::::::: */
 	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -266,8 +271,8 @@ function init() {
 	window.Player1 = new Media({
 	container: "player-1", // div ID of the video container
 	type: "audio",
-	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/red-play.png", // this images needed to be hosted in google bucket
-	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/red-pause.png", // this images needed to be hosted in google bucket
+	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/play-red.svg", // this images needed to be hosted in google bucket
+	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/pause-red.svg", // this images needed to be hosted in google bucket
 	id: "audio-1",
 	mp3: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/audio/DeondrayGossfield-v2.mp3", // this mp3 file needed to be hosted in google bucket
 	});
@@ -275,8 +280,8 @@ function init() {
 	window.Player2 = new Media({
 	container: "player-2", // div ID of the video container
 	type: "audio",
-	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/blue-play.png", // this images needed to be hosted in google bucket
-	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/blue-pause.png", // this images needed to be hosted in google bucket
+	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/play-blue.svg", // this images needed to be hosted in google bucket
+	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/pause-blue.svg", // this images needed to be hosted in google bucket
 	id: "audio-2",
 	mp3: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/audio/AdamKey.mp3", // this mp3 file needed to be hosted in google bucket
 	});
@@ -284,8 +289,8 @@ function init() {
 	window.Player3 = new Media({
 	container: "player-3", // div ID of the video container
 	type: "audio",
-	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/pink-play.png", // this images needed to be hosted in google bucket
-	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/pink-pause.png", // this images needed to be hosted in google bucket
+	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/play-purple.svg", // this images needed to be hosted in google bucket
+	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/pause-purple.svg", // this images needed to be hosted in google bucket
 	id: "audio-3",
 	mp3: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/audio/VannGraves.mp3", // this mp3 file needed to be hosted in google bucket
 	});
@@ -299,6 +304,33 @@ function init() {
 		window.open("https://advertising.amazon.com/library/guides/customer-values?ref_=cmpgn_sv_gd_nyt&utm_source=nyt&utm_medium=tbpp","_blank");
 	})
 
+
+	var audioBox = document.querySelectorAll(".audio-box");
+	//console.log(audioBox);
+
+
+
+	function DeviceSpecific (whichOne) {
+		if (whichOne == "desktop") {
+			audioBox.forEach(function(element) { element.classList.add("desktop");});
+		}
+		else if (whichOne == "tablet") {}
+		else if (whichOne == "mobile") {
+			audioBox.forEach(function(element) { element.classList.remove("desktop");});
+		}
+	}
+
+
+
+	// window.addEventListener('resize', function(){
+	// 	let browserWidth = window.innerWidth;
+	// 	if (browserWidth < 768) {
+	// 		DeviceSpecific("mobile");
+	// 	}
+	// 	else {
+	// 		DeviceSpecific("desktop");
+	// 	}		
+	// });
 
 }
 

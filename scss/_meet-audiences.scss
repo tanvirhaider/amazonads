@@ -5,6 +5,10 @@
     padding-top: 40px;
   }
 
+  @include breakpoint(mobile) {
+	padding-top: 40px;
+  }
+
   picture {
     width: 100%;
     height: auto;
@@ -21,9 +25,9 @@
     max-width: 100vw;
     max-height: 51vw;
     overflow: hidden;
-    min-width: 100vw;
+    // min-width: 100vw;
     min-height: 51vw;
-    background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/large-3.jpg);
+    background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/Illustration_2.jpg);
     background-size: contain;
     border-radius: 1.5vw;
 }
@@ -36,9 +40,11 @@
     padding-bottom: 50px;
     line-height: 0.9;
     width: 80%;
-    @include breakpoint(tablet) {
-      padding-bottom: 35px;
-    }
+    color: black;
+
+    @include breakpoint(tablet) {padding-bottom: 35px;}
+	@include breakpoint(mobile) {letter-spacing: -3px; }
+	
   }
 
   .section-para {
@@ -50,6 +56,7 @@
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     width: 80%;
+	color: black;
 
     @include breakpoint(mobile) {
       @include mobileparagraph();
@@ -60,25 +67,31 @@
     content: "‘";
     position: absolute;
     left: calc(var(--pad-left) - 1vw);
+    color: black;
   }
 
   .section-para::after {
     content: "’";
+   
   }
 
-  .section-para-2 {
-    margin-left: var(--pad-left);
-    padding-bottom: var(--section-gaps);
-    font-family: "paralucent";
-    font-size: var(--h3size);
-    font-weight: 300;
-    letter-spacing: 1px;
+	.section-para-2 {
+		margin-left: var(--pad-left);
+		padding-bottom: var(--section-gaps);
+		font-family: "paralucent";
+		font-size: var(--h3size);
+		font-weight: 300;
+		letter-spacing: 1px;
 
-    @include breakpoint(tablet) {
-      width: 48%;
-      padding-bottom: 50px;
-    }
-  }
+		@include breakpoint(tablet) {
+			width: 48%;
+			padding-bottom: 50px;
+		}
+
+		@include breakpoint(mobile) {
+			padding-bottom: 20px;
+		}
+	}
 
   .consumer-copy {
     @include breakpoint(tablet) {

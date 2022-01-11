@@ -16,7 +16,7 @@
     overflow: hidden;
     // min-width: 100vw;
     min-height: 51vw;
-    background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/large-4.jpg);
+    background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/Illustration_3_v02.jpg);
     background-size: contain;
     border-radius: 1.5vw;
 }
@@ -28,6 +28,10 @@
     padding-bottom: var(--section-padding);
     margin-left: var(--pad-left);
     line-height: 0.9;
+    color: black;
+
+    @include breakpoint(mobile) {letter-spacing: -3px; }
+
   }
   .section-para-1 {
     padding-top: 20px;
@@ -36,12 +40,14 @@
     font-weight: 300;
     margin-left: var(--pad-left);
     padding-bottom: var(--section-padding);
+    color: black;
   }
 
   .section-para-1::before {
     content: "‘";
     position: absolute;
     left: calc(var(--pad-left) - 1vw);
+    color: black;
   }
 
   .section-para-1::after {

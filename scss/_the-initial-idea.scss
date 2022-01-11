@@ -1,6 +1,14 @@
+
+
+
+
 .the-initial-idea {
   display: flex;
+  width: inherit;
+ 
   justify-content: space-between;
+  position: relative;
+  height: fit-content;
 
   .box-left {
     margin-left: var(--pad-left);
@@ -16,6 +24,17 @@
       width: 70%;
       margin-left: var(--pad-left);
     }
+
+    .per-sec {
+			@include breakpoint(tablet) {
+				position: relative;
+				top: -15px;
+
+        .value {
+          letter-spacing: -25px;
+        }
+			}
+		}
   }
 
   .consumer-copy {
@@ -27,59 +46,25 @@
   }
 
   .audio-box {
-    position: relative;
-    left: -40px;
-    padding-bottom: var(--section-padding);
-
-    .audio-talent {
-      color: var(--red);
-      padding-top: 10px;
+    padding-right:var(--pad-left);
+    overflow: visible;
+    .talent-pic { 
+      transform: rotate(-5deg);
+      @include breakpoint(mobile) { transform: rotate(2deg);}
     }
-
-    .player-control {
-      color: var(--red);
-      text-align: right;
-    }
-
-    .talent-pic img {
-      transform: rotate(3deg);
-    }
-
-    .audio-player {
-      position: relative;
-      margin-left: auto;
-
-      @include breakpoint(tablet) {
-        position: absolute;
-      }
-    }
-
-    @include breakpoint(mobile) {
-      left: unset;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: 50px;
-    }
-
-    @include breakpoint(tablet) {
-      left: unset;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: 50px;
-    }
+    .player .audio-talent {color: #FF415F}
+    .player .ct {color: #FF415F}
+   
   }
+ 
 
-  .default-play-buttom,
-  .default-pause-buttom {
-    // filter: hue-rotate(88deg) brightness(1.5);
-  }
 
   @include breakpoint(mobile) {
     flex-direction: column-reverse;
   }
 
   @include breakpoint(tablet) {
-    padding-top: 40px;
+    // padding-top: 40px;
     flex-direction: column-reverse;
     padding-bottom: 40px;
   }
