@@ -22,44 +22,7 @@ function init() {
 	});
 
 
-	// initAnimation.fromTo(
-	//   ".hero img",
-	//   { x: 500, scale: 0.5, alpha: 0, rotation: 30, y: 100 },
-	//   { delay: 1, x: 0, scale: 1, alpha: 1, duration: 1, rotation: 0, y: 0 }
-	// );
 
-
-	// initAnimation.fromTo(
-	// 	".hero .hero-img",
-	// 	{ x: 0, scale: 1, alpha: 0, rotation: 0, y: 0, backgroundPosition: "50% -2000%"},
-	// 	{ delay: .5, x: 0, scale: 1, alpha: 1, duration: 2, rotation: 0, y: 0 , backgroundPosition: "50% 50%", ease: "power3.inOut"}
-	// );
-
-
-	// initAnimation.fromTo(
-	// 	".hero .other-than-hero",
-	// 	{ alpha:0 },
-	// 	{ duration: 1, alpha:1 },	"-=0.75"
-	// );
-
-	// initAnimation.fromTo(
-	// 	".hero .devider-line",
-	// 	{ alpha: 0, y: 0, width: "0%" },
-	// 	{ alpha: 1, duration: 1, y: 0 , delay: 0.2, width: "calc(100% - 80px)"},
-	// 	"-=0.75"
-	// );
-	// initAnimation.fromTo(
-	// 	".how-to-share .copy-left",
-	// 	{ alpha: 0, x: -500 },
-	// 	{ alpha: 1, duration: 1, x: 0 },
-	// 	"-=0.75"
-	// );
-	// initAnimation.fromTo(
-	// 	".how-to-share .copy-right",
-	// 	{ alpha: 0, x: 500 },
-	// 	{ alpha: 1, duration: 1, x: 0 },
-	// 	"-=1"
-	// );
 
 
 	}
@@ -105,60 +68,7 @@ function init() {
 	75
 	);
 
-	/* :::: Code to slide the larger section header images ::::::: */
-	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
-	/*
-
-	function largeImgSlide(data) {
-	var largeImgSlide1 = gsap.timeline({
-		scrollTrigger: {
-		trigger: data.trigger,
-		pinSpacing: false,
-		scrub: 0.5,
-		start: "top bottom+=10%",
-		end: "+=100%",
-		},
-	});
-
-	largeImgSlide1.fromTo(
-		data.target,
-		{
-		x: data.xpos,
-		scale: 0.5,
-		alpha: 0,
-		rotation: data.rotation,
-		y: data.ypos,
-		},
-		{ x: 0, scale: 1, alpha: 1, duration: 1, rotation: 0, y: 0 }
-	);
-	}
-
-	largeImgSlide({
-	trigger: ".take-a-stand",
-	target: ".take-a-stand img",
-	xpos: 500,
-	ypos: 100,
-	rotation: 30,
-	});
-
-
-	largeImgSlide({
-	trigger: ".meet-audiences",
-	target: ".meet-audiences img",
-	xpos: -500,
-	ypos: 100,
-	rotation: -30,
-	});
-	largeImgSlide({
-	trigger: ".build-trust",
-	target: ".build-trust img",
-	xpos: 500,
-	ypos: 100,
-	rotation: 30,
-	});
-
-	*/
 
 	var largeImgSlide1 = gsap.timeline({
 	scrollTrigger: {
@@ -238,32 +148,7 @@ function init() {
 	);
 	}
 
-	/*
-	talentImgSlide({
-	trigger: ".the-initial-idea .desktop .talent-pic",
-	target: ".the-initial-idea .desktop .talent-pic img",
-	xpos: 100,
-	rotationstart: -3,
-	rotationend: 3,
-	});
-	
 
-	talentImgSlide({
-	trigger: ".indeed-and-hillman .desktop .talent-pic",
-	target: ".indeed-and-hillman .desktop .talent-pic img",
-	xpos: -100,
-	rotationstart: 3,
-	rotationend: -3,
-	});
-
-	talentImgSlide({
-	trigger: ".the-best-connections .desktop .talent-pic",
-	target: ".the-best-connections .desktop .talent-pic img",
-	xpos: 100,
-	rotationstart: -3,
-	rotationend: 3,
-	});
-	*/
 
 	/* ::::::::: Code to set up Audio Players  ::::::::::::::::::: */
 	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -271,8 +156,8 @@ function init() {
 	window.Player1 = new Media({
 	container: "player-1", // div ID of the video container
 	type: "audio",
-	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/play-red.svg", // this images needed to be hosted in google bucket
-	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/pause-red.svg", // this images needed to be hosted in google bucket
+	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/btn-play-pink.svg", // this images needed to be hosted in google bucket
+	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/btn-pause-pink.svg", // this images needed to be hosted in google bucket
 	id: "audio-1",
 	mp3: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/audio/DeondrayGossfield-v2.mp3", // this mp3 file needed to be hosted in google bucket
 	});
@@ -280,8 +165,8 @@ function init() {
 	window.Player2 = new Media({
 	container: "player-2", // div ID of the video container
 	type: "audio",
-	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/play-blue.svg", // this images needed to be hosted in google bucket
-	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/pause-blue.svg", // this images needed to be hosted in google bucket
+	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/btn-play-blue.svg", // this images needed to be hosted in google bucket
+	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/btn-pause-blue.svg", // this images needed to be hosted in google bucket
 	id: "audio-2",
 	mp3: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/audio/AdamKey.mp3", // this mp3 file needed to be hosted in google bucket
 	});
@@ -289,8 +174,8 @@ function init() {
 	window.Player3 = new Media({
 	container: "player-3", // div ID of the video container
 	type: "audio",
-	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/play-purple.svg", // this images needed to be hosted in google bucket
-	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/pause-purple.svg", // this images needed to be hosted in google bucket
+	playbutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/btn-play-purple.svg", // this images needed to be hosted in google bucket
+	pausebutton: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/icons/btn-pause-purple.svg", // this images needed to be hosted in google bucket
 	id: "audio-3",
 	mp3: "https://storage.googleapis.com/nytpi/paidposts/2022/amazon/audio/VannGraves.mp3", // this mp3 file needed to be hosted in google bucket
 	});
@@ -320,17 +205,6 @@ function init() {
 		}
 	}
 
-
-
-	// window.addEventListener('resize', function(){
-	// 	let browserWidth = window.innerWidth;
-	// 	if (browserWidth < 768) {
-	// 		DeviceSpecific("mobile");
-	// 	}
-	// 	else {
-	// 		DeviceSpecific("desktop");
-	// 	}		
-	// });
 
 }
 

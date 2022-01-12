@@ -19,6 +19,12 @@
     background-image: url(https://storage.googleapis.com/nytpi/paidposts/2022/amazon/images/Illustration_3_v02.jpg);
     background-size: contain;
     border-radius: 1.5vw;
+
+    @include breakpoint(mobile) {
+      max-height: unset;
+      min-height: 240px;
+      background-position: 50% 50%;
+    }
 }
 
   .section-header {
@@ -30,7 +36,10 @@
     line-height: 0.9;
     color: black;
 
-    @include breakpoint(mobile) {letter-spacing: -3px; }
+    @include breakpoint(mobile) {
+      letter-spacing: -3px; 
+      padding-bottom: 34px;
+    }
 
   }
   .section-para-1 {
@@ -40,14 +49,23 @@
     font-weight: 300;
     margin-left: var(--pad-left);
     padding-bottom: var(--section-padding);
+    padding-bottom: 30px;
     color: black;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 18px;
+    }
   }
 
   .section-para-1::before {
     content: "‘";
     position: absolute;
-    left: calc(var(--pad-left) - 1vw);
+    // left: calc(var(--pad-left) - 0.6vw);
+    left: 75px;
     color: black;
+
+    @include breakpoint(mobile) { left: 8px;}
+    @include breakpoint(tablet) { left: 48px;}
   }
 
   .section-para-1::after {
@@ -60,6 +78,12 @@
     margin-left: var(--pad-left);
     // padding-bottom: var(--section-gaps);
     padding-bottom: var(--section-padding);
+    padding-bottom: 100px;
+
+    @include breakpoint(mobile) {
+      max-width: calc(100% - 30px);
+      padding-bottom: 60px;
+    }
   }
 
   @include breakpoint(tablet) {

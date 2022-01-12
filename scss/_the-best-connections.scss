@@ -22,6 +22,16 @@
 			width: 70%;
 			margin-left: var(--pad-left);
 		}
+
+		.per-sec {
+			.large-percent {
+				@include breakpoint(tablet) { 
+					// padding-top: 43px; 
+					padding-top: 20px;
+				}
+
+			}
+		}
 	}
 
 	.large-percent {
@@ -41,12 +51,18 @@
 
 		@include breakpoint(tablet) {
 			left: -10px;
-			line-height: 45vw;
+			line-height: 1;
 			padding-bottom: unset;
 		}
 	}
 
-	.consumer-copy {color: var(--pink);}
+	.consumer-copy {
+		color: var(--pink);
+		@include breakpoint(tablet) {
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
+	}
 
 	/*
 	.consumer-copy {

@@ -16,11 +16,17 @@
 			margin-left: var(--pad-left);
 		}
 
-
 		.per-sec {
 			@include breakpoint(tablet) {
 				position: relative;
 				top: -15px;
+			}
+
+			.large-percent {
+				@include breakpoint(tablet) { 
+					//padding-top: 63px; 
+					margin-top: 60px;
+				}
 			}
 		}
 	}
@@ -30,13 +36,14 @@
 		left: -6vw;
 
 		@include breakpoint(mobile) { left: -20px;}
+		@include breakpoint(tablet) { left: -20px;}
 	}
 
 	.consumer-copy {
 		color: var(--blue);
 		@include breakpoint(tablet) {
 			width: 80%;
-			padding-bottom: 80px;
+			padding-bottom: 16px;
 		}
 	}
 

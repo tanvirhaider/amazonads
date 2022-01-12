@@ -3,11 +3,21 @@ p {
 	line-height: 1.5;
 	font-family: "Source Sans Pro", sans-serif;
 	color: var(--body-copy-color);
+	font-size: var(--body-copy-fsize);
+
+	@include breakpoint(mobile) {
+		font-size: var(--body-copy-fsize);
+	}
+
+	@include breakpoint(tablet) {
+		font-size: var(--body-copy-fsize);
+	}
+
 }
 
 .large-percent {
 	font-family: "nazare";
-	font-size: var(--percentVal);
+	
 	letter-spacing: -2vw;
 	position: relative;
 	font-weight: 500;
@@ -19,6 +29,16 @@ p {
 	line-height: 25vw;
 	padding-bottom: 20px;
 	padding-top: 100px;
+
+	.value {
+		font-size: var(--percentVal);
+		color: black;
+
+		@include breakpoint(tablet) {
+			letter-spacing: -28px;
+		}
+
+	}
 
 	.percent-symbol {
 		font-family: "nazare";
@@ -37,26 +57,31 @@ p {
 		}
 
 		@include breakpoint(tablet) {
-			top: 30px;
+			top: 50px;
 			right: -50px;
 			margin-left: auto;
 			margin-right: auto;
+			height: 86px;
+			line-height: 1;
+
 		}
 	}
 
 	@include breakpoint(mobile) {
 		line-height: 55vw;
 		letter-spacing: -5vw;
-		left: -20px;
-		margin-left: auto;
+		// left: -20px;
+		left: -5px;
+		margin-left: 0px;
 		margin-right: auto;
 		margin-top: 45px;
 	}
 
 	@include breakpoint(tablet) {
-		line-height: 45vw;
+		line-height: var(--percentVal);
 		letter-spacing: -5vw;
 		margin-top: 0px;
+		padding-top: 0px;
 	}
 }
 
@@ -64,23 +89,26 @@ p {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-family: "paralucent";
+	letter-spacing: 0.5px;
 }
 
 .consumer-copy {
 	font-family: "paralucent";
-	font-size: 3vw;
+	font-size: var(--consumer-fsize);
 	font-weight: 300;
 	padding-bottom: 120px;
-	line-height: 3vw;
+	line-height: 1.1;
 
 	@include breakpoint(mobile) {
-		font-size: 8vw;
+		font-size: var(--consumer-fsize);
 		line-height: 1;
 	}
 
 	@include breakpoint(tablet) {
 		font-size: 5vw;
 		line-height: 1;
+		position: relative;
+		top: -30px;
 		// width: 80%;
 	}
 }
@@ -165,7 +193,7 @@ p {
 
 				.player-control {
 					font-family: "paralucent";
-					font-size: var(--player-control-fsize);
+					font-size: var(--body-copy-fsize);
 					width: fit-content;
 					display: flex;
 					
@@ -175,17 +203,11 @@ p {
 					
 				
 					@include breakpoint(mobile) {
-						font-size: 3vw;
+						font-size: var(--body-copy-fsize);
 					}
 				
 					@include breakpoint(tablet) {
-						// font-size: 2vw;
-						// position: absolute;
-						// top: 70px;
-						// right: 0px;
-						// display: flex;
-						// flex-flow: column;
-						// text-align: right;
+						font-size: var(--body-copy-fsize);
 					}
 				}
 
@@ -196,18 +218,18 @@ p {
 
 			.audio-talent {
 				font-family: "paralucent";
-				font-size: var(--audio-talent-fsize);
+				font-size: var(--body-copy-fsize);
 				line-height: 1.2;
 				position: relative;
 				padding-top: 20px;
 				
 	
 				@include breakpoint(mobile) {
-					font-size: 3vw;
+					font-size: var(--body-copy-fsize);
 				}
 	
 				@include breakpoint(tablet) {
-					font-size: 2vw;
+					font-size: var(--body-copy-fsize);
 				}
 			}
 	
@@ -254,7 +276,7 @@ p {
 	color: black;
 
 	@include breakpoint(mobile) {
-		padding-top: 40px;
+		padding-top: 34px;
 	}
 }
 

@@ -26,22 +26,28 @@
     }
 
     .per-sec {
-			@include breakpoint(tablet) {
-				position: relative;
-				top: -15px;
-
-        .value {
-          letter-spacing: -25px;
-        }
+		.large-percent {
+			@include breakpoint(tablet) { 
+				//padding-top: 63px; 
+				margin-top: 55px;
 			}
 		}
+
+		@include breakpoint(tablet) {
+			position: relative;
+			top: -15px;
+			padding-top: 0px;
+
+			.value {letter-spacing: -25px;}
+		}
+	}
   }
 
   .consumer-copy {
     color: var(--red);
     @include breakpoint(tablet) {
-      width: 80%;
-      padding-bottom: 80px;
+		width: 80%;
+		padding-bottom: 15px;
     }
   }
 
@@ -64,7 +70,6 @@
   }
 
   @include breakpoint(tablet) {
-    // padding-top: 40px;
     flex-direction: column-reverse;
     padding-bottom: 40px;
   }
